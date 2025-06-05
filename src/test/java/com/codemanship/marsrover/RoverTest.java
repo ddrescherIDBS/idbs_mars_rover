@@ -49,4 +49,38 @@ public class RoverTest
         rover.turnRight();
         Assertions.assertEquals(Direction.NORTH, rover.getOrientation());
     }
+
+
+    @Test
+    void rotateLeftFromNorth()
+    {
+        Rover rover = new Rover(Direction.NORTH);
+        rover.turnLeft();
+        Assertions.assertEquals(Direction.WEST, rover.getOrientation());
+    }
+
+    @Test
+    void rotateLeftFromEast()
+    {
+        Rover rover = new Rover(Direction.EAST);
+        rover.turnLeft();
+        Assertions.assertEquals(Direction.NORTH, rover.getOrientation());
+    }
+
+
+    @Test
+    void rotateLeftFromSouth()
+    {
+        Rover rover = new Rover(Direction.SOUTH);
+        rover.turnLeft();
+        Assertions.assertEquals(Direction.EAST, rover.getOrientation());
+    }
+
+    @Test
+    void rotateLeftFromWest()
+    {
+        Rover rover = new Rover(Direction.WEST);
+        rover.turnLeft();
+        Assertions.assertEquals(Direction.SOUTH, rover.getOrientation());
+    }
 }

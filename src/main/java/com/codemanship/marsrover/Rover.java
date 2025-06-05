@@ -26,4 +26,15 @@ public class Rover
         int p = (dirs.indexOf(direction) + 1) % 4;
         direction = dirs.get(p);
     }
+
+    public void turnLeft()
+    {
+        List<Direction> dirs = new ArrayList<>();
+        dirs.add(Direction.WEST);
+        dirs.add(Direction.SOUTH);
+        dirs.add(Direction.EAST);
+        dirs.add(Direction.NORTH);
+        int p = (dirs.indexOf(direction) + 1) % 4;
+        direction = dirs.get(p);
+    }
 }
